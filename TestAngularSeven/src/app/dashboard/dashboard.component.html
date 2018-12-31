@@ -1,0 +1,32 @@
+<p>
+  dashboard works!
+</p>
+<ul>
+<li><span>ID::</span><span>{{id}}</span><br></li>
+<li><span>userID::</span><span>{{userID}}</span><br></li>
+<li><span>data:: </span><span>{{title}}</span><br></li>
+</ul>
+
+<ul>
+    <li>
+        <label>County</label>
+            <span>
+                    <select select2 style="width:20%;" class="select2" id="symbolId" [(ngModel)]="selectBox">
+                        <option *ngFor="let symbol of symbols" value="{{symbol}}">{{symbol}}</option>
+                     </select>
+             </span>
+
+    </li>
+        <li>
+        <label>State</label>
+            <span>
+                  <select2 [data]="myCountryData" (valueChanged)="callChange($event)" [options]="options"  [cssImport]="true" ></select2>
+
+             </span>
+
+    </li>
+</ul>
+<ul>
+    <li> <input type="button" (click)="sendback()" value="Back"/> </li>
+
+</ul>
