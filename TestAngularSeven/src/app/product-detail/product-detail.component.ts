@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-product-detail',
@@ -7,9 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductDetailComponent implements OnInit {
 
+  @Input() public toChildString:String;
   constructor() { }
 
   ngOnInit() {
+        console.log("Parent data is => "+this.toChildString);
   }
 
 }

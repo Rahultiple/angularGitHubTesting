@@ -5,7 +5,7 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 import { LoginComponent } from './login/login.component';
 import { HeaderComponent } from './header/header.component';
 import { ProductlistSidebarComponent } from './productlist-sidebar/productlist-sidebar.component';
-
+import { FooterComponent } from './footer/footer.component';
 const routes: Routes = [
   { path: "products", component: DashboardComponent },
   { path: "product/:id", component: ProductDetailComponent },
@@ -26,9 +26,16 @@ const routes: Routes = [
   },
   {
     path: "dashboard",
-    component: DashboardComponent,
+    component: DashboardComponent
+ 
+  },
+   {
+    path: "",
+    component: FooterComponent,
+    outlet: "footerbar"
  
   }
+  
 ];
 
 @NgModule({
